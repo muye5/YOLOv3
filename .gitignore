@@ -1,0 +1,8 @@
+*.jpg
+*.jpeg
+*.h5
+*.pyc
+.idea
+.DS_Store
+*.tar.gz
+conf/init/
