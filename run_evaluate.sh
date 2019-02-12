@@ -8,7 +8,7 @@ function predict()
         -i ./data/voc/test/VOCdevkit/VOC2007/JPEGImages \
         -f ./data/voc/test/VOCdevkit/VOC2007/test.txt \
         -o ./data/voc/test/VOCdevkit/VOC2007/predict/ \
-        -m ./data/ckpt/yolo_kd_fk_voc/yolo_kd_fk_voc.pb \
+        -m ./data/ckpt/yolo_darknet53_voc.pb \
         -c ./conf/yolo_darknet53_voc.json \
         -t voc \
         ;

@@ -4,16 +4,10 @@ set -e
 function gen_anchors()
 {
      python util/gen_anchors.py \
-         -c ./conf/yolo_kd_lk.json \
+         -c ./conf/yolo_darknet53_voc.json \
          -a ./data/voc/train/VOCdevkit/VOC2007_2012/Annotations/ \
          -f ./data/voc/train/VOCdevkit/VOC2007_2012/ImageSets/Main/trainval.txt \
          -i ./data/voc/train/VOCdevkit/VOC2007_2012/JPEGImages/
-
-#    python util/gen_anchors.py \
-#        -c ./conf/yolo_darknet53_coco2014.json \
-#        -a ./data/coco/annotations/coco2voc/trainval/annotations/ \
-#        -f ./data/coco/annotations/coco2voc/trainval.txt \
-#        -i ./data/coco/images/trainval2014/
 }
 
 function gen_tfrecord()

@@ -171,7 +171,7 @@ def main(args):
     cluster = tf.train.ClusterSpec(cluster_spec)
 
     config = tf.ConfigProto()
-    config.gpu_options.allow_growth = False
+    config.gpu_options.allow_growth = True
     config.allow_soft_placement = True
 
     server = tf.train.Server(cluster, job_name=flags.job_name, config=config, task_index=flags.task_index)

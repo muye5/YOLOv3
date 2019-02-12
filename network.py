@@ -19,8 +19,9 @@ class YOLOV3(object):
         print('architecture = {}'.format(self.architecture))
         if self.architecture == 'DarkNet53':
             self.loss, self.output_nodes = DarkNet53(max_box_per_image, warm_up_batches, config)
-            cutoff = 75 if flags.init_weights.endswith('darknet53.conv.74') else 106
-            self.load_weights = darknet53_load_weights(prefix='', cutoff=cutoff)
+            if flags.init_weights:
+                cutoff = 75 if flags.init_weights.endswith('darknet53.conv.74') else 106
+                self.load_weights = darknet53_load_weights(prefix='', cutoff=cutoff)
         elif self.architecture == 'YOLOFLY':
             self.loss, self.output_nodes = YOLOFLY(max_box_per_image, warm_up_batches, config)
             self.load_weights = tiny_darknet_load_weights

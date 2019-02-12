@@ -104,8 +104,8 @@ class Evaluator(object):
         self.config = config
         self.augment = augment
 
-        self.val_data = params['data']
-        self.val_loss = params['loss']
+        self.val_data = params['data'] if 'data' in params else None
+        self.val_loss = params['loss'] if 'loss' in params else None
         self.output_nodes = params['output_nodes']
 
         self.obj_thresh = params['obj_thresh'] if 'obj_thresh' in params else 0.25

@@ -149,11 +149,9 @@ def inference(sess, input_image, output_nodes, images, net_h, net_w):
     batch_input = np.zeros((nb_images, net_h, net_w, 3))
     for i in range(nb_images):
         batch_input[i] = preprocess_input(images[i], net_h, net_w)
-    # start = time.time()
     batch_output = sess.run(output_nodes, feed_dict={
         input_image: batch_input
     })
-    # print(nb_images, time.time() - start)
 
     if MODEL_FLOPS is None:
         run_metadata = tf.RunMetadata()
