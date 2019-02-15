@@ -52,9 +52,31 @@ YOLOv3 implemented with distributed tensorflow including train and inference mod
 ### Performance
 Train Data | Test Data | Input Size | Model | Initialize | mAP | FLOPS |
 -----------|-----------|------------|-------|------------|-----|-------|
-VOC2007+2012 | VOC2007 Test | 416*416 | DarkNet53(YOLOv3) | darknet53.conv.74 | 0.772 | 65.86 |
+VOC2007+2012 | VOC2007 Test | 416*416 | DarkNet53(YOLOv3) | darknet53.conv.74 | 0.782 | 65.86 |
 VOC2007+2012 | VOC2007 Test | 416*416 | YOLOFLY | tiny.weights | 0.691 | 9.78 |
 
+###### ***DarkNet53(YOLOV3)***
+    aeroplane       AP = 0.869675
+    bicycle         AP = 0.858369
+    bird            AP = 0.745337
+    boat            AP = 0.714346
+    bottle          AP = 0.656200
+    bus             AP = 0.852547
+    car             AP = 0.877897
+    cat             AP = 0.860574
+    chair           AP = 0.652006
+    cow             AP = 0.777205
+    diningtable     AP = 0.750408
+    dog             AP = 0.815225
+    horse           AP = 0.868844
+    motorbike       AP = 0.848694
+    person          AP = 0.837868
+    pottedplant     AP = 0.536273
+    sheep           AP = 0.725731
+    sofa            AP = 0.754855
+    train           AP = 0.847557
+    tvmonitor       AP = 0.782320
+    mAP = 0.781596517434
 
-#### Acknowledgements
+### Acknowledgements
 Thanks to [experiencor](https://github.com/experiencor) for his great job of [keras-yolo3](https://github.com/experiencor/keras-yolo3)
